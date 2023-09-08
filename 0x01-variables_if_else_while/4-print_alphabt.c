@@ -1,4 +1,3 @@
-4-print_alphabt.c
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
