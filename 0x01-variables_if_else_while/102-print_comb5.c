@@ -1,4 +1,3 @@
-102-print_comb5.c
 #include <stdio.h>
 /**
 * main - prints all possible combinations of two two-digit numbers
