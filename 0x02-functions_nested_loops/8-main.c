@@ -2,7 +2,7 @@
 
 /**
  * main - check the code
- *
+ * jack_bauer - Prints the time in 24-hour format
  * Return: Always 0.
  */
 int main(void)
