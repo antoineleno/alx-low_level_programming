@@ -25,5 +25,5 @@ else if (n < 0)
 _putchar('-');
 return (-1);
 }
-return (0); // This return statement is added to handle any other cases
+return (0); 
 }
