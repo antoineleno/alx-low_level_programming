@@ -16,7 +16,3 @@ i = 0;
 printf("Infinite loop avoided! \\o/\n");
 return (0);
 }
-2-largest_number.c
-#include "main.h"
-/**
-* largest_number - returns the largest
