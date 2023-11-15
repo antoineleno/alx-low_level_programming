@@ -2,12 +2,13 @@
 #include <unistd.h>
 
 /**
- * _putchar - writes the character c
+ * _puchar - writes the character c
  * @c: The character to print
  * 
- * Return: 0 Always (Sucess)
+ * Return: 0 Always (sucess)
 */
-int _putchar(char c)
+
+int _putchar( char c)
 {
-return (write(1, &c, 1));
+return ( write(1, &c, 1));
 }
