@@ -5,12 +5,13 @@
  * @s: The string to be printed.
 */
 
-void print_rev_recursion(char *s);
-void print_rev_recursion(char *s)
+void _putchar(char c);
+void _print_rev_recursion(char *s);
+void _print_rev_recursion(char *s)
 {
 if (*s)
 {
-print_rev_recursion(s + 1);
-putchar(*s);
+_print_rev_recursion(s + 1);
+_putchar(*s);
 }
 }
