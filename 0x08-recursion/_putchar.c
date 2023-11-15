@@ -2,10 +2,11 @@
 #include <unistd.h>
 
 /**
- * _puchar - writes the character c
+ * _puchar - writes the character c 
  * @c: The character to print
  * 
- * Return: 0 Always (sucess)
+ * Return: On sucess, the character written is returned.
+ * On error, -1 is returned, and errno is set appropriately.
 */
 
 int _putchar( char c)
