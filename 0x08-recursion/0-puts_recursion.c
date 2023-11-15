@@ -3,6 +3,7 @@
 /**
  * _puts_recursion - function like puts();
  * @s: input
+ * @c: Character char c
  * Return: Always 0 (Sucess)
 */
 void _putchar(char c);
