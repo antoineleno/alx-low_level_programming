@@ -7,15 +7,15 @@
 */
 
 
-void _puts_recursion( char *n)
+void _puts_recursion(char *n)
 {
-    if (*n)
-    {
-        _putchar(*n);
-        _puts_recursion(n + 1);
-    }
-    else
-    {
-        _putchar('\n');
-    }
+if (*n)
+{
+_putchar(*n);
+_puts_recursion(n + 1);
+}
+else
+{
+_putchar('\n');
+}
 }
