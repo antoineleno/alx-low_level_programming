@@ -48,6 +48,11 @@ int is_palindrome_helper(int start, int end, char *s)
 	}
 }
 
+/**
+ *  _strlen_recursion - Function to calculate the length of a string.
+ *  @s: String to calculate the length.
+ * Return: The length of the
+*/
 
 int _strlen_recursion(char *s)
 {
