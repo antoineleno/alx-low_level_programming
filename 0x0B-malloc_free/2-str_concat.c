@@ -13,6 +13,10 @@ char *str_concat(char *s1, char *s2)
 	unsigned int length_of_s2 = 0;
 	char *buffer;
 	unsigned int i, j;
+	if (s1 == NULL || s2 == NULL)
+	{
+		return (NULL);
+	}
 
 	length_of_s1 = _strlen(s1);
 	length_of_s2 = _strlen(s2);
