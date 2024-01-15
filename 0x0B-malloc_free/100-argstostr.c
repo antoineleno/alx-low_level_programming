@@ -20,11 +20,11 @@ char *argstostr(int ac, char **av)
 	{
 		if (av != NULL)
 		{
-			total_length += _strlen(av[i]) + 1;
+			total_length += _strlen(av[i]);
 		}
 	}
 
-	concatenate_string = (char *)malloc(total_length * sizeof(char));
+	concatenate_string = (char *)malloc((total_length + 1) * sizeof(char));
 
 	if (concatenate_string == NULL)
 	{
