@@ -24,7 +24,7 @@ char *argstostr(int ac, char **av)
 		}
 	}
 
-	concatenate_string = (char *)malloc(total_length * sizeof(char));
+	concatenate_string = (char *)malloc(total_length * sizeof(char) + 1);
 
 	if (concatenate_string == NULL)
 	{
