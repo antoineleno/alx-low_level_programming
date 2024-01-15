@@ -20,7 +20,7 @@ char *argstostr(int ac, char **av)
 	{
 		if (av != NULL)
 		{
-			total_length += _strlen(av[i]) + 1; 
+			total_length += _strlen(av[i]) + 1;
 		}
 	}
 
@@ -33,7 +33,7 @@ char *argstostr(int ac, char **av)
 
 	for (i = 0; i < ac; i++)
 	{
-		if (av != NULL)
+		if (av[i] != NULL)
 		{
 			for (j = 0; av[i][j] != '\0'; j++)
 			{
