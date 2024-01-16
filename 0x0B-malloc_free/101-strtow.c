@@ -25,7 +25,7 @@ char **strtow(char *str)
 		free(copy_of_string);
 		return (NULL);
 	}
-	token = _strtok(copy_of_string, " \t\n");
+	token = strtok(copy_of_string, " \t\n");
 	while (token != NULL)
 	{
 		ArrayofWords[wordIndex] = (char *)malloc((_strlen(token) + 1) * sizeof(char));
@@ -40,7 +40,7 @@ char **strtow(char *str)
 		}
 		_strcpy(ArrayofWords[wordIndex], token);
 		wordIndex++;
-		token = _strtok(NULL, "\t\n");
+		token = strtok(NULL, "\t\n");
 	}
 	free(copy_of_string);
 	ArrayofWords[wordIndex] = NULL;
