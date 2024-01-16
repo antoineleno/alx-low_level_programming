@@ -19,7 +19,7 @@ char **strtow(char *str)
 		free(copy_of_string);
 		return (NULL);
 	}
-	ArrayofWords = (char **)malloc((numberWords) * sizeof(char *));
+	ArrayofWords = (char **)malloc((numberWords + 1) * sizeof(char *) -1);
 
 	if (ArrayofWords == NULL)
 	{
