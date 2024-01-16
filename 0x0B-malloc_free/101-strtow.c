@@ -43,7 +43,6 @@ char **strtow(char *str)
 		wordIndex++;
 		token = strtok(NULL, " \t\n");
 	}
-	ArrayofWords[wordIndex] = NULL;
 	free(copy_of_string);
 	return (ArrayofWords);
 }
