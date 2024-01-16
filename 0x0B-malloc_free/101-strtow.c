@@ -33,7 +33,7 @@ char **strtow(char *str)
 		if (ArrayofWords[wordIndex] == NULL)
 		{
 			free(copy_of_string);
-			for (size_t i = 0; i < wordIndex; i++)
+			for (i  = 0; i < wordIndex; i++)
 			{
 				free(ArrayofWords[i]);
 			}
