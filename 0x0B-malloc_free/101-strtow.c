@@ -1,4 +1,4 @@
-#include "main.h"
+#include"main.h"
 
 /**
  * strtow - Function that split a string into words
@@ -9,8 +9,9 @@
 
 char **strtow(char *str)
 {
-	int i, j, wordIndex = 0, numberWords = word_count(str);
+	int i, wordIndex = 0, numberWords = word_count(str);
 	char *token;
+	char **ArrayofWords;
 	char *copy_of_string = _strdup(str);
 
 	if (numberWords == 0 || *copy_of_string == '\0')
@@ -18,7 +19,7 @@ char **strtow(char *str)
 		free(copy_of_string);
 		return (NULL);
 	}
-	char **ArrayofWords = (char **)malloc((numberWords + 1) * sizeof(char *));
+	ArrayofWords = (char **)malloc((numberWords + 1) * sizeof(char *));
 
 	if (ArrayofWords == NULL)
 	{
@@ -106,5 +107,68 @@ char *_strcpy(char *destination, char *source)
 	destination[i] = '\0';
 
 	return (destination);
+}
+
+#include "main.h"
+
+/**
+ * _strlen - Function to find the length of a string.
+ * @str: String to find its length.
+ * Return: The length of the string.
+*/
+
+int _strlen(const char *str)
+{
+	unsigned int length = 0;
+
+	while (*str != '\0')
+	{
+		length++;
+		str++;
+	}
+
+	return (length);
+}
+
+#include "main.h"
+
+/**
+ * _strdup - Function to duplicate a string?
+ * @str: String to be duplicate
+ * Return: The duplicate string.
+*/
+
+char *_strdup(char *str)
+{
+	unsigned int length_of_str = 0, i;
+	char *new_str = str;
+	char *buffer;
+
+	if (str == NULL)
+	{
+		return (NULL);
+	}
+	while (*new_str != '\0')
+	{
+		length_of_str++;
+		new_str++;
+	}
+
+
+	buffer = (char *)malloc((length_of_str + 1) * sizeof(char));
+
+	if (buffer == NULL)
+	{
+		return (NULL);
+	}
+
+	for (i = 0; i < length_of_str; i++)
+	{
+		buffer[i] = str[i];
+	}
+
+	buffer[i] = '\0';
+
+	return (buffer);
 }
 
