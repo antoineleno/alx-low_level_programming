@@ -12,7 +12,7 @@ char **strtow(char *str)
 	int i, wordIndex = 0, numberWords = word_count(str);
 	char *token;
 	char **ArrayofWords;
-	char *copy_of_string = _strdup(str);
+	char *copy_of_string = strdup(str);
 
 	if (numberWords == 0 || *copy_of_string == '\0')
 	{
