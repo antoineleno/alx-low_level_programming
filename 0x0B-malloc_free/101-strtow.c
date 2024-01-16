@@ -1,5 +1,5 @@
 #include"main.h"
-
+#include <stdio.h>
 /**
  * strtow - Function that split a string into words
  * @str: String to be split
@@ -51,35 +51,29 @@ char **strtow(char *str)
 
 /**
  * word_count - Function to count the number of words in the string.
- * @string: Argument of the function
+ * @s: Argument of the function
  * Return: The number of words
 */
 
-int word_count(char *string)
+int word_count(char *s)
 {
-	int count = 0;
+	int flag, c, w;
 
-	if (*string == '\t' || *string == ' ' || *string == '\n')
-	{
-		string++;
-	}
+	flag = 0;
+	w = 0;
 
-	while (*string != '\0')
+	for (c = 0; s[c] != '\0'; c++)
 	{
-		if (*string == '\t' || *string == ' ' || *string == '\n')
+		if (s[c] == ' ')
+			flag = 0;
+		else if (flag == 0)
 		{
-			count++;
-			while (*string == '\t' || *string == ' ' || *string == '\n')
-			{
-				string++;
-			}
-		}
-		else
-		{
-			string++;
+			flag = 1;
+			w++;
 		}
 	}
-	return (count);
+
+	return (w);
 }
 
 /**
