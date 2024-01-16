@@ -41,7 +41,7 @@ char **strtow(char *str)
 		}
 		_strcpy(ArrayofWords[wordIndex], token);
 		wordIndex++;
-		token = strtok(NULL, "\t\n");
+		token = strtok(NULL, " \t\n");
 	}
 	free(copy_of_string);
 	ArrayofWords[wordIndex] = NULL;
@@ -72,10 +72,6 @@ int word_count(char *string)
 			while (*string == '\t' || *string == ' ' || *string == '\n')
 			{
 				string++;
-			}
-			if (*string == '\0')
-			{
-				break;
 			}
 		}
 		else
