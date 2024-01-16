@@ -19,7 +19,7 @@ char **strtow(char *str)
 		free(copy_of_string);
 		return (NULL);
 	}
-	ArrayofWords = (char **)malloc((numberWords) * sizeof(char *));
+	ArrayofWords = (char **)malloc((numberWords + 1) * sizeof(char *));
 
 	if (ArrayofWords == NULL)
 	{
@@ -29,7 +29,7 @@ char **strtow(char *str)
 	token = strtok(copy_of_string, " \t\n");
 	while (token != NULL)
 	{
-	ArrayofWords[wordIndex] = (char *)malloc((_strlen(token)) * sizeof(char));
+	ArrayofWords[wordIndex] = (char *)malloc((_strlen(token) +1) * sizeof(char));
 		if (ArrayofWords[wordIndex] == NULL)
 		{
 			free(copy_of_string);
