@@ -156,7 +156,7 @@ char *_strdup(char *str)
 		buffer[i] = str[i];
 	}
 
-	buffer[i] = '\0';
+	
 
 	return (buffer);
 }
