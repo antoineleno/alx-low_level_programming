@@ -93,7 +93,6 @@ char *_strcpy(char *destination, char *source)
 		j++;
 	}
 
-	destination[i] = '\0';
 
 	return (destination);
 }
@@ -156,7 +155,7 @@ char *_strdup(char *str)
 		buffer[i] = str[i];
 	}
 
-	
+	buffer[i] = '\0';
 
 	return (buffer);
 }
