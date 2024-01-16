@@ -12,7 +12,7 @@ char **strtow(char *str)
 	int i, wordIndex = 0, numberWords = word_count(str);
 	char *token;
 	char **ArrayofWords;
-	char *copy_of_string = strdup(str);
+	char *copy_of_string = _strdup(str);
 
 	if (numberWords == 0 || *copy_of_string == '\0')
 	{
@@ -33,7 +33,7 @@ char **strtow(char *str)
 		if (ArrayofWords[wordIndex] == NULL)
 		{
 			free(copy_of_string);
-			for (i  = 0; i < wordIndex; i++)
+			for (size_t i = 0; i < wordIndex; i++)
 			{
 				free(ArrayofWords[i]);
 			}
