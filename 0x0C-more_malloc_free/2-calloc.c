@@ -22,5 +22,26 @@ void *_calloc(unsigned int nmemb, unsigned int size)
 		return (NULL);
 	}
 
+	_memset(array, 0, nmemb * size);
+
 	return (array);
+}
+
+/**
+ * _memset - Function like memset
+ * @s: buffer
+ * @b: character
+ * @n: number of character to set
+ * Return: The set string.
+*/
+
+char *_memset(char *s, char b, unsigned int n)
+{
+	unsigned int i;
+
+	for (i = 0; i < n; i++)
+	{
+		s[i] = b;
+	}
+	return (s);
 }
