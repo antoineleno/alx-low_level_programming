@@ -1,5 +1,5 @@
 #include "main.h"
-#include <string.h>
+
 /**
  * string_nconcat - Function to concatenate n character
  * @s1: First string
@@ -20,20 +20,20 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 	{
 		s2 = "";
 	}
-	if (strlen(s2) < n)
+	if (_strlen(s2) < n)
 	{
-		m = strlen(s1) + strlen(s2);
+		m = _strlen(s1) + _strlen(s2);
 	}
 	else
 	{
-		m = strlen(s1) + n;
+		m = _strlen(s1) + n;
 	}
 	dest_string = malloc((m + 1) * sizeof(char));
 	if (dest_string == NULL)
 	{
 		return (NULL);
 	}
-	for (i = 0; i < strlen(s1); i++)
+	for (i = 0; i < _strlen(s1); i++)
 	{
 		dest_string[i] = s1[i];
 	}
