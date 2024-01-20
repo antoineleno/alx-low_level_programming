@@ -12,6 +12,8 @@
 void _digits_checker(char *str);
 void _print_message(void);
 int _atoi(char *s);
+void _print_number(int number);
+
 
 int main(int argc, char *argv[])
 {
@@ -31,7 +33,7 @@ int main(int argc, char *argv[])
 	number1 = _atoi(argv[1]);
 	number2 = _atoi(argv[2]);
 	result  = number1 * number2;
-	printf("%lu\n",result);
+	_print_number(result);
 
 	return (0);
 }
@@ -117,5 +119,32 @@ return (n);
  * @number: Number to be printed
  * Return: Nothing to be return
 */
+
+
+void _print_number(int number)
+{
+int remainder, base, i;
+int temp = number;
+int digitCount = 0;
+while (temp > 0)
+{
+temp = temp / 10;
+digitCount++;
+}
+int result[digitCount];
+i = digitCount - 1;
+while (number > 0)
+{
+remainder = number % 10;
+result[i] = remainder + '0';
+number = number / 10;
+i--;
+}
+for (int j = 0; j < digitCount; j++)
+{
+_putchar(result[j]);
+}
+_putchar('\n');
+}
 
 
