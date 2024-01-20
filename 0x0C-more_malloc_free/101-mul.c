@@ -124,7 +124,7 @@ return (n);
 void _print_number(int number)
 {
 int remainder, i, j;
-int result[20];
+int result[22];
 int temp = number;
 int digitCount = 0;
 while (temp > 0)
