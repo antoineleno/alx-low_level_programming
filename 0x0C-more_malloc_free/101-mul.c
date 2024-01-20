@@ -15,16 +15,14 @@ int _print_number(int number);
 
 int main(int argc, char *argv[])
 {
-	int result = 1, n, i, length1, length2, number1, number2;
+	int result = 1, i, number1, number2;
 
 	if (argc != 3)
 	{
 		_print_message();
 		exit(98);
 	}
-	length1 = _strlen(argv[1]);
-	length2 = _strlen(argv[2]);
-	n = length1 + length2;
+
 	for (i = 1; i < 3; i++)
 	{
 		_digits_checker(argv[i]);
@@ -131,7 +129,7 @@ int _print_number(int number)
 		temp = temp / 10;
 		digitcount++;
 	}
-	result[digitcount];
+	result = malloc(digitcount);
 	i = digitcount - 1;
 	while (number > 0)
 	{
@@ -146,4 +144,5 @@ int _print_number(int number)
 		_putchar(result[j]);
 	}
 	_putchar('\n');
+	return (0);
 }
