@@ -123,7 +123,8 @@ return (n);
 
 void _print_number(int number)
 {
-int remainder, base, i;
+int remainder, i, j;
+int result[20];
 int temp = number;
 int digitCount = 0;
 while (temp > 0)
@@ -131,7 +132,6 @@ while (temp > 0)
 temp = temp / 10;
 digitCount++;
 }
-int result[digitCount];
 i = digitCount - 1;
 while (number > 0)
 {
@@ -140,7 +140,7 @@ result[i] = remainder + '0';
 number = number / 10;
 i--;
 }
-for (int j = 0; j < digitCount; j++)
+for (j = 0; j < digitCount; j++)
 {
 _putchar(result[j]);
 }
