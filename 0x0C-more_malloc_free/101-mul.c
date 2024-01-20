@@ -17,6 +17,7 @@ int main(int argc, char *argv[])
 {
 	int result = 1, i, number1, number2;
 
+
 	if (argc != 3)
 	{
 		_print_message();
@@ -112,7 +113,7 @@ return (n);
 }
 
 /**
- * _print_digit - Function to print intenger
+ * _print_number - Function to print intenger
  * @number: Number to be printed
  * Return: Nothing to be return
 */
