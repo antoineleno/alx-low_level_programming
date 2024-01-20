@@ -1,5 +1,6 @@
 #include <unistd.h>
 #include <stdlib.h>
+#include <stdio.h>
 #include "main.h"
 
 /**
@@ -11,11 +12,10 @@
 void _digits_checker(char *str);
 void _print_message(void);
 int _atoi(char *s);
-int _print_number(int number);
 
 int main(int argc, char *argv[])
 {
-	int result = 1, i, number1, number2;
+	long int result = 1, i, number1, number2;
 
 
 	if (argc != 3)
@@ -31,7 +31,7 @@ int main(int argc, char *argv[])
 	number1 = _atoi(argv[1]);
 	number2 = _atoi(argv[2]);
 	result  = number1 * number2;
-	_print_number(result);
+	printf("%lu\n",result);
 
 	return (0);
 }
@@ -118,32 +118,4 @@ return (n);
  * Return: Nothing to be return
 */
 
-int _print_number(int number)
-{
-	int remainder, j, i;
-	int *result;
-	int temp = number;
-	int digitcount = 0;
 
-	while (temp > 0)
-	{
-		temp = temp / 10;
-		digitcount++;
-	}
-	result = malloc(digitcount);
-	i = digitcount - 1;
-	while (number > 0)
-	{
-		remainder = number % 10;
-		result[i] = remainder + '0';
-		number = number / 10;
-		i--;
-	}
-
-	for (j = 0; j < digitcount; j++)
-	{
-		_putchar(result[j]);
-	}
-	_putchar('\n');
-	return (0);
-}
