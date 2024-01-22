@@ -8,12 +8,13 @@
 int main(void)
 {
 	const char *file = __FILE__;
+
 	while (*file != '\0')
 	{
 		_putchar(*file);
 		file++;
 	}
 	_putchar('\n');
-	
+
 	return (0);
 }
