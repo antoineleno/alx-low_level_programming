@@ -4,6 +4,7 @@
  * @name: argument of the structure
  * @age: Argument of the structure
  * @owner: Argument of the structure
+ * Return: The structure
 */
 
 dog_t *new_dog(char *name, float age, char *owner)
