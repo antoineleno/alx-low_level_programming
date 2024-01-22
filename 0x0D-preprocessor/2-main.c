@@ -1,12 +1,19 @@
-#include <stdio.h>
+#include "main.h"
 
 /**
- * main - prints the name of the file
- *
+ * main - Entry point
  * Return: Always 0 (Success)
- */
+*/
+
 int main(void)
 {
-printf("%s\n", __FILE__);
-return (0);
+	const char *file = __FILE__;
+	while (*file != '\0')
+	{
+		_putchar(*file);
+		file++;
+	}
+	_putchar('\n');
+	
+	return (0);
 }
