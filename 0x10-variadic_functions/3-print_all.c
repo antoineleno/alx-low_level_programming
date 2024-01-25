@@ -13,7 +13,7 @@ void print_all(const char * const format, ...)
 
 	va_list list_of_argument;
 
-	va_start(list_of_argumen, format);
+	va_start(list_of_argument, format);
 
 	if (format)
 	{

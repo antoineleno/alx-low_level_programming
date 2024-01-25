@@ -25,7 +25,7 @@ void print_numbers(const char *separator, const unsigned int n, ...)
 		{
 			if (i != 0)
 			{
-				printf("%s %d", separator, x);
+				printf("%s%d", separator, x);
 			}
 			else
 			{
@@ -37,5 +37,4 @@ void print_numbers(const char *separator, const unsigned int n, ...)
 	printf("\n");
 	va_end(list_of_argument);
 }
-
 
