@@ -4,7 +4,6 @@
  * My_starting_message - Function to be execute before the main function
 */
 
-void My_starting_message(void) __attribute__ ((constructor));
 
 void My_starting_message(void)
 {
