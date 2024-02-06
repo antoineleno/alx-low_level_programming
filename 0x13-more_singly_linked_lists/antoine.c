@@ -50,6 +50,7 @@ int main(void)
 	free(one);
 	free(Two);
 	free(Three);
+	printf("\n");
 
-return (0);
+	return (0);
 }
