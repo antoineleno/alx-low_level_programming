@@ -18,7 +18,8 @@ listint_t *add_nodeint(listint_t **head, const int n)
 
 	if (head == NULL)
 	{
-		return (NULL);
+		new_node = *head;
+		return (new_node);
 	}
 
 	if (new_node == NULL)
