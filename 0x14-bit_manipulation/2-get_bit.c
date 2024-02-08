@@ -23,6 +23,13 @@ int get_bit(unsigned long int n, unsigned int index)
 		return (-1);
 	}
 
-	Bitindex = (n >> index) & 1;
+	for (i = 0; i < NumberBits; i++)
+	{
+		if (i == index)
+		{
+			n = n >> i;
+			Bitindex = n & 1;
+		}
+	}
 	return (Bitindex);
 }
