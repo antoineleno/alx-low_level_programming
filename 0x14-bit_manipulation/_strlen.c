@@ -5,9 +5,9 @@
  * Return: The length of the string
 */
 
-unsigned int _strlen(char *string)
+int _strlen(const char *string)
 {
-	unsigned int length = 0;
+	int length = 0;
 
 	if (string == NULL)
 	{
