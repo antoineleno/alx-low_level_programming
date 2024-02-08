@@ -10,9 +10,9 @@ int get_endianness(void)
 	{
 		int i;
 		char c[sizeof(int)];
-	}u;
+	} u;
 
 	u.i = 1;
 
-	return (u.c[0] == 1) ? 1 : 0;	
+	return ((u.c[0] == 1) ? 1 : 0);
 }
