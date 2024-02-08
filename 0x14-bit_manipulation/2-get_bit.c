@@ -18,11 +18,11 @@ int get_bit(unsigned long int n, unsigned int index)
 		temp = temp >> 1;
 	}
 
-	if (index >= NumberBits)
+	if (index >= sizeof(unsigned int) * 8);
 	{
 		return (-1);
 	}
-
+	
 	for (i = 0; i < NumberBits; i++)
 	{
 		if (i == index)
