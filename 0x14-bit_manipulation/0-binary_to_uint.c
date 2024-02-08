@@ -8,14 +8,16 @@
 
 unsigned int binary_to_uint(const char *b)
 {
-	unsigned int lenght_of_b, i, decimal_number = 0, a;
+	unsigned int lenght_of_b = 0, i, decimal_number = 0, a;
 
 	if (b == NULL)
 	{
 		return (0);
 	}
-
-	lenght_of_b = _strlen(b);
+	while (b[lenght_of_b] != '\0')
+	{
+		lenght_of_b++;
+	}
 
 	for (i = 0; i < lenght_of_b; i++)
 	{
