@@ -28,7 +28,7 @@ int append_text_to_file(const char *filename, char *text_content)
 		close(dp);
 		return (-1);
 	}
-	
+
 	for (bytes_read = 0; text_content[bytes_read];)
 	{
 		bytes_read++;
@@ -43,5 +43,5 @@ int append_text_to_file(const char *filename, char *text_content)
 	}
 
 	close(dp);
-	return(1);	
+	return (1);
 }
