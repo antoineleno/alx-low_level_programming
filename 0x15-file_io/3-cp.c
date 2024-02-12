@@ -21,7 +21,7 @@ int main(int argc, char *argv[])
 		dprintf(STDERR_FILENO, "Error: Can't read from %s\n", argv[1]);
 		exit(98);
 	}
-	destination_file = open(argv[2], O_WRONLY | O_CREAT | O_TRUNC, 0664);
+	destination_file = open(argv[2], O_CREAT | O_WRONLY | O_TRUNC, 0664);
 	if (destination_file == -1)
 	{
 		dprintf(STDERR_FILENO, "Error: Can't write to %s\n", argv[2]);
@@ -42,7 +42,5 @@ int main(int argc, char *argv[])
 		source_file : destination_file);
 		exit(100);
 	}
-	close(source_file);
-	close(destination_file);
 	return (0);
 }
