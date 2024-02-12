@@ -13,7 +13,7 @@ int create_file(const char *filename, char *text_content)
 	int bytes_written, bytes_read;
 
 
-	dp = open(filename, O_WRONLY | O_CREAT | O_TRUNC, 0600);
+	dp = open(filename, O_CREAT | O_RDWR | O_TRUNC, 0600);
 
 	if (dp == -1)
 	{
@@ -25,7 +25,7 @@ int create_file(const char *filename, char *text_content)
 	bytes_read = strlen(text_content);
 
 	bytes_written = write(dp, text_content, bytes_read);
-	
+
 	if (bytes_written == -1)
 	{
 		write(STDOUT_FILENO, message, strlen(message));
