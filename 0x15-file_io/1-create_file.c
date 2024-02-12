@@ -25,7 +25,7 @@ int create_file(const char *filename, char *text_content)
 
 	if (dp == -1)
 	{
-		write(1, "fails", 5);
+		write(STDOUT_FILENO, "fails", 5);
 		close(dp);
 		return (-1);
 	}
@@ -41,5 +41,5 @@ int create_file(const char *filename, char *text_content)
 	}
 
 	close(dp);
-	return(1);
+	return (1);
 }
