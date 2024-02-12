@@ -8,8 +8,8 @@
 int main(int argc, char *argv[])
 {
 	int destination_file, source_file, bytes_read, bytes_written;
-	char buffer[1025];
-
+	char *buffer;
+	buffer = malloc(1025 * sizeof(char));
 	if (argc != 3)
 	{
 		dprintf(STDERR_FILENO, "Usage: %s file_from file_to\n", argv[0]);
@@ -44,5 +44,6 @@ int main(int argc, char *argv[])
 	}
 	close(source_file);
 	close(destination_file);
+	free(buffer);
 	return (0);
 }
