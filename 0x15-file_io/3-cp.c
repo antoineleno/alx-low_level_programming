@@ -12,7 +12,7 @@ int main(int argc, char *argv[])
 
 	if (argc != 3)
 	{
-		perror("Usage : file_from file_to\n");
+		perror("Usage: cp file_from file_to\n");
 		exit(97);
 	}
 	source_file = open(argv[1], O_RDONLY);
@@ -25,7 +25,7 @@ int main(int argc, char *argv[])
 	if (destination_file == -1)
 	{
 		dprintf(STDERR_FILENO, "Error : Can't write to %s\n", argv[2]);
-		exit(EXIT_FAILURE);
+		exit(99);
 	}
 	while ((bytes_read = read(source_file, buffer, sizeof(buffer) - 1)) > 0)
 	{
@@ -37,7 +37,8 @@ int main(int argc, char *argv[])
 	}
 	if (close(source_file) == -1 || close(destination_file) == -1)
 	{
-		dprintf(STDERR_FILENO, "Error : Can't close %s\n", (source_file == -1) ? argv[1] : argv[2]);
+		dprintf(STDERR_FILENO, "Error : Can't close %d\n", (source_file == -1) ? 
+		source_file : destination_file);
 		exit(100);
 	}
 	return (0);
