@@ -12,7 +12,7 @@ int main(int argc, char *argv[])
 
 	if (argc != 3)
 	{
-		perror("Usage: cp file_from file_to\n");
+		dprintf(STDERR_FILENO, "Usage: %s file_from file_to\n", argv[0]);
 		exit(97);
 	}
 	source_file = open(argv[1], O_RDONLY);
@@ -32,7 +32,8 @@ int main(int argc, char *argv[])
 		bytes_written = write(destination_file, buffer, bytes_read);
 		if (bytes_written == -1)
 		{
-			return (-1);
+       			dprintf(STDERR_FILENO, "Error: Read failed for %s\n", argv[1]);
+       			exit(98);
 		}
 	}
 	if (close(source_file) == -1 || close(destination_file) == -1)
