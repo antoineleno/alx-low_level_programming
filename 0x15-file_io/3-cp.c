@@ -41,5 +41,7 @@ int main(int argc, char *argv[])
 		source_file : destination_file);
 		exit(100);
 	}
+	close(source_file);
+	close(destination_file);
 	return (0);
 }
