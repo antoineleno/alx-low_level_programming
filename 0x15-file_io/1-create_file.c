@@ -28,7 +28,7 @@ int create_file(const char *filename, char *text_content)
 
 	bytes_read = strlen(text_content);
 
-	bytes_written = write(STDOUT_FILENO, text_content, bytes_read);
+	bytes_written = write(dp, text_content, bytes_read);
 
 	if (bytes_read != bytes_written)
 	{
