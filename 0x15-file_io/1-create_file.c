@@ -16,6 +16,12 @@ int create_file(const char *filename, char *text_content)
 		return (-1);
 	}
 
+	if (text_content != NULL)
+	{
+		for (bytes_read = 0; text_content[bytes_read];)
+		bytes_read++;
+	}
+	
 	bytes_read = strlen(text_content);
 
 
