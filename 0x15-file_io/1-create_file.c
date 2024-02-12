@@ -25,6 +25,13 @@ int create_file(const char *filename, char *text_content)
 	bytes_read = strlen(text_content);
 
 	bytes_written = write(dp, text_content, bytes_read);
+	
+	if (bytes_written == -1)
+	{
+		write(STDOUT_FILENO, message, strlen(message));
+		close(dp);
+		return (-1);
+	}
 
 	if (bytes_read != bytes_written)
 	{
