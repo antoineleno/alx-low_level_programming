@@ -28,12 +28,15 @@ int append_text_to_file(const char *filename, char *text_content)
 		close(dp);
 		return (-1);
 	}
-
-	bytes_read = _strlen(text_content);
+	
+	for (bytes_read = 0; text_content[bytes_read];)
+	{
+		bytes_read++;
+	}
 
 	bytes_written = write(dp, text_content, bytes_read);
 
-	if (bytes_read != bytes_written)
+	if (bytes_written == -1)
 	{
 		close(dp);
 		return (-1);
