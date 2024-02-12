@@ -12,11 +12,6 @@ ssize_t read_textfile(const char *filename, size_t letters)
 	char *buffer;
 	ssize_t bytes_read, bytes_written;
 
-	if (filename == NULL)
-	{
-		return (0);
-	}
-
 	dp = open(filename, O_RDONLY);
 
 	if (dp == -1)
