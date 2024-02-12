@@ -21,16 +21,16 @@ int main(int argc, char *argv[])
 		dprintf(STDERR_FILENO, "Error : Can't read from %s\n", argv[1]);
 		exit(98);
 	}
-	destination_file = open(argv[2], O_WRONLY | O_CREAT, 0664);
+	destination_file = open(argv[2], O_WRONLY | O_CREAT | O_TRUNC, 0664);
 	if (destination_file == -1)
 	{
 		dprintf(STDERR_FILENO, "Error : Can't write to %s\n", argv[2]);
-		exit(99);
+		exit(EXIT_FAILURE);
 	}
-	while ((bytes_read = read(source_file, buffer, 1025)) > 0)
+	while ((bytes_read = read(source_file, buffer, sizeof(buffer) - 1)) > 0)
 	{
 		bytes_written = write(destination_file, buffer, bytes_read);
-		if (bytes_read != bytes_written)
+		if (bytes_written == -1)
 		{
 			return (-1);
 		}
