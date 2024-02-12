@@ -1,15 +1,10 @@
 #include "main.h"
-#include <string.h>
-
-
 /**
  * main - Entry point
  * @argc: Number of argument enter while executing the program
  * @argv: Arguments enter while executing the program
  * Return: Always 0 (Success)
 */
-
-
 int main(int argc, char *argv[])
 {
 	int destination_file, source_file, bytes_read, bytes_written;
@@ -40,7 +35,7 @@ int main(int argc, char *argv[])
 			return (-1);
 		}
 	}
-	if (close(source_file) == - 1 || close(destination_file) == -1)
+	if (close(source_file) == -1 || close(destination_file) == -1)
 	{
 		fprintf(stderr, "Error : Can't close %s\n", (source_file == -1) ? argv[1] : argv[2]);
 		exit(100);
