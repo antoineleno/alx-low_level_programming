@@ -12,10 +12,6 @@ int create_file(const char *filename, char *text_content)
 	char message[6] = "fails";
 	int bytes_written, bytes_read;
 
-	if (filename == NULL || text_content == NULL)
-	{
-		return (-1);
-	}
 
 	dp = open(filename, O_WRONLY | O_CREAT | O_TRUNC, 0600);
 
