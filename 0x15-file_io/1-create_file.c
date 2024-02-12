@@ -8,9 +8,9 @@
 
 int create_file(const char *filename, char *text_content)
 {
-	int dp;
-	char message[5] = "fails";
-	int bytes_written, bytes_read;
+	int dp, i;
+	char message[6] = "fails";
+	int bytes_written;
 
 	if (filename == NULL || text_content == NULL)
 	{
@@ -25,16 +25,13 @@ int create_file(const char *filename, char *text_content)
 		close(dp);
 		return (-1);
 	}
-
-	bytes_read = strlen(text_content);
-
-	bytes_written = write(dp, text_content, bytes_read);
-
-	if (bytes_read != bytes_written)
+	if (text_content != NULL)
 	{
-		close(dp);
-		return (-1);
+		for (i = 0; text_content[i] != NULL; i++);
+
 	}
+
+	bytes_written = write(dp, text_content, i);
 
 	close(dp);
 	return (1);
