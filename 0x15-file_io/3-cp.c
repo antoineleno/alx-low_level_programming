@@ -36,10 +36,14 @@ int main(int argc, char *argv[])
 			exit(99);
 		}
 	}
-	if (close(source_file) == -1 || close(destination_file) == -1)
+	if (close(source_file) == -1)
 	{
-		dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", (source_file == -1) ?
-		source_file : destination_file);
+		dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", source_file);
+		exit(100);
+	}
+	if (close(destination_file) == -1)
+	{
+		dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", destination_file);
 		exit(100);
 	}
 	return (0);
