@@ -32,8 +32,8 @@ int main(int argc, char *argv[])
 		bytes_written = write(destination_file, buffer, bytes_read);
 		if (bytes_written == -1)
 		{
-       			dprintf(STDERR_FILENO, "Error: Read failed for %s\n", argv[1]);
-       			exit(98);
+			dprintf(STDERR_FILENO, "Error : Can't write to %s\n", argv[2]);
+			exit(99);
 		}
 	}
 	if (close(source_file) == -1 || close(destination_file) == -1)
