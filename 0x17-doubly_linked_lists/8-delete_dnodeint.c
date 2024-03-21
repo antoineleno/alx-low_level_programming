@@ -2,7 +2,7 @@
 /**
  * delete_dnodeint_at_index - function to delete node at index
  * @head: head of the node
- * index: index to delete the node
+ * @index: index to delete the node
  * Return: 1 if successful otherwise -1
  */
 
