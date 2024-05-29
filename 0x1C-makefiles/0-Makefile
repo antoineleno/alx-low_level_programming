@@ -1,15 +1,4 @@
-# Define the rule for building the executable 'school'
-all: school
+all : school
 
-# Rule to compile the 'school' executable from its object files
-school: main.o utils.o
-    gcc -o school main.o utils.o
-
-# Rule to compile 'main.o' from 'main.c'
-main.o: main.c
-    gcc -c main.c
-
-# Rule to compile 'utils.o' from 'utils.c'
-utils.o: utils.c
-    gcc -c utils.c
-
+school : main.c school.c
+	gcc main.c school.c -o school
