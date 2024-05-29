@@ -1,0 +1,29 @@
+CC = gcc
+SRC = main.c school.c
+NAME = school
+
+all: $(NAME)
+
+$(NAME): $(SRC:.c=.o)
+	$(CC) -o $@ $^
+
+clean:
+	@$(RM) *~ \#*\# $(NAME)
+
+oclean:
+	@$(RM) $(wildcard *.o)
+
+fclean: clean oclean
+	@$(RM) $(NAME)
+
+re: fclean all
+
+ifeq ($(wildcard m.h),)
+$(error m.h header file is missing)
+endif
+
+ifeq ($(origin RM), undefined)
+RM = rm -f
+endif
+
+.PHONY: all clean oclean fclean re
