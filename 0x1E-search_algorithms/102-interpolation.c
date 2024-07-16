@@ -2,7 +2,7 @@
 #include <stdio.h>
 
 /**
- * interpolation_search - Searching the value in 
+ * interpolation_search - Searching the value in
  * a array using interpolation search
  * @array: The array to search the value in
  * @size: The size of the array
@@ -14,6 +14,7 @@ int interpolation_search(int *array, size_t size, int value)
 {
 	size_t low, high, pos;
 	double fraction;
+
 	low = 0;
 	high = size - 1;
 
